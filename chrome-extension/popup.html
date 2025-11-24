@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Sentiment Analyzer</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🎭 Sentiment Analyzer</h1>
+            <button id="themeToggle" class="theme-btn">🌙</button>
+        </header>
+
+        <div id="status" class="status hidden"></div>
+
+        <div class="controls">
+            <button id="analyzeBtn" class="btn btn-primary">
+                Analyser les commentaires
+            </button>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Analyse en cours...</p>
+        </div>
+
+        <div id="results" class="results hidden">
+            <div class="stats-grid">
+                <div class="stat-card positive">
+                    <div class="stat-icon">😊</div>
+                    <div class="stat-value" id="positivePercent">0%</div>
+                    <div class="stat-label">Positifs</div>
+                </div>
+                <div class="stat-card neutral">
+                    <div class="stat-icon">😐</div>
+                    <div class="stat-value" id="neutralPercent">0%</div>
+                    <div class="stat-label">Neutres</div>
+                </div>
+                <div class="stat-card negative">
+                    <div class="stat-icon">😞</div>
+                    <div class="stat-value" id="negativePercent">0%</div>
+                    <div class="stat-label">Négatifs</div>
+                </div>
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="positif">Positifs</button>
+                <button class="filter-btn" data-filter="neutre">Neutres</button>
+                <button class="filter-btn" data-filter="négatif">Négatifs</button>
+            </div>
+
+            <div class="actions">
+                <button id="copyBtn" class="btn btn-secondary">📋 Copier</button>
+                <span id="totalComments" class="total">0 commentaires</span>
+            </div>
+
+            <div id="commentsList" class="comments-list"></div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
