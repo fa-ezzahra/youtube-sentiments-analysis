@@ -1,5 +1,5 @@
 // Configuration de l'API
-const API_URL = 'http://localhost:8000'; // Changer après déploiement
+const API_URL = 'https://fezzahra-1-youtube-sentiments-api.hf.space';
 
 // Éléments DOM
 const analyzeBtn = document.getElementById('analyzeBtn');
