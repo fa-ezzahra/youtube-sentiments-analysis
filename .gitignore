@@ -1,0 +1,35 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Data
+data/raw/*.csv
+data/processed/*.csv
+
+# Models (trop volumineux pour GitHub)
+models/*.joblib
+*.pkl
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
